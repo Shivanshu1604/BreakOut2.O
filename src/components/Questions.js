@@ -80,9 +80,9 @@ const Questions = () => {
       </div>
 
       <div className="my-16 flex flex-col gap-6 items-start mx-auto max-w-sm">
-        <a
+      <a
           className="text-lg font-mono px-6 py-3 border border-white border-opacity-50"
-          href={`/Questions/question${question}.pdf`}
+          href={`/Questions/question${question}.pdf`}  style={{zIndex: 10001}}
         >
           Get Your Question as PDF
         </a>

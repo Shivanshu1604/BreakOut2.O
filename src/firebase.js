@@ -1,7 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getDatabase } from 'firebase/database'
-import { getAuth, GoogleAuthProvider, signInWithRedirect } from 'firebase/auth'
-
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 const firebaseConfig = {
   apiKey: 'AIzaSyBSRZSQ5Lr9yYu6Yl45NWC6mszVd6Ahqbg',
   authDomain: 'escape-room-mntc.firebaseapp.com',
@@ -16,8 +15,10 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 const db = getDatabase(app)
-const provider = new GoogleAuthProvider()
 const auth = getAuth()
 
-export { auth, provider, signInWithRedirect }
+const provider = new GoogleAuthProvider()
+//var provider = new firebase.auth.GoogleAuthProvider();
+
+export { auth, provider, signInWithPopup }
 export default db

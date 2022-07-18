@@ -1,9 +1,15 @@
 import React from 'react'
-
+import { useHistory } from 'react-router-dom'
 function Rules() {
+  const history = useHistory();
+  const move=()=>
+  {
+    history.push('/')
+  }
   return (
     <div className="container mx-auto px-2 py-10 min-h-full">
-      <h1 className="text-4xl md:text-6xl font-display tracking-widest">
+      <h1 className="text-4xl md:text-6xl font-display tracking-widest" onClick={move}>
+        
         Rules
       </h1>
       <ul className="my-8 flex flex-col text-lg md:text-xl font-mono gap-7 list-disc list-inside max-w-md md:mx-auto">

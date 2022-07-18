@@ -1,15 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react'
-
-function Countdown() {
+function Countdown()
+{
   const [timerDays, setTimerDays] = useState('00')
   const [timerHours, setTimerHours] = useState('00')
   const [timerMins, setTimerMins] = useState('00')
   const [timerSecs, setTimerSecs] = useState('00')
-
   let interval = useRef()
-  const startTimer = () => {
-    const countdownDate = new Date('Nov 10, 2021 19:00:00 GMT+0530').getTime()
 
+  const startTimer = () => 
+  {
+    const countdownDate = new Date('Nov 10, 2022 19:00:00 GMT+0530').getTime()
     interval = setInterval(() => {
       const now = new Date().getTime()
       const distance = countdownDate - now
@@ -27,6 +27,7 @@ function Countdown() {
 
       if (distance < 0) {
         clearInterval(interval.current)
+  
       } else {
         setTimerHours(hours)
         setTimerDays(days)

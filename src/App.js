@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/Home'
 import Login from './components/Login'
 import Questions from './components/Questions'
-import NoiseBG from './components/NoiseBG'
+import BackBG from './components/BackBG'
 import Navbar from './components/Navbar'
 import Leaderboard from './components/Leaderboard'
 import Rules from './components/Rules'
@@ -62,13 +62,13 @@ function App() {
     <>
       {now < countdownDate ? (
         <>
-          <NoiseBG />
+          <BackBG />
           <Countdown />
         </>
       ) : (
         <Router>
           <Navbar />
-          <NoiseBG />
+          <BackBG />
           {user ? (
             <Switch>
               <Route path="/" exact>
